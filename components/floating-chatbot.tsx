@@ -116,10 +116,10 @@ export default function FloatingChatbot() {
     }
   }
 
-  // WhatsApp integration - Replace with your WhatsApp business number
+  // WhatsApp integration - Opens Twilio WhatsApp bot
   const openWhatsApp = () => {
-    const phoneNumber = "916261072872" // Replace with your WhatsApp business number (with country code, no + or spaces)
-    const message = encodeURIComponent("Hi! I need help with CityGuardian.")
+    const phoneNumber = "14155238886" // Twilio WhatsApp Sandbox number
+    const message = encodeURIComponent("join green-tiger")
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank")
   }
 
