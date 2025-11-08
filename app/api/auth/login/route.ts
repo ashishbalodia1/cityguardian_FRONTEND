@@ -1,17 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-
-// In-memory user storage (shared with signup)
-const users = new Map<string, any>()
-
-// Pre-populate demo user
-users.set('demo@cityguardian.net', {
-  id: '1',
-  email: 'demo@cityguardian.net',
-  name: 'Demo User',
-  password: 'guardian2025',
-  userType: 'citizen',
-  createdAt: new Date().toISOString()
-})
+import { users } from '@/lib/user-store'
 
 export async function POST(request: NextRequest) {
   try {
